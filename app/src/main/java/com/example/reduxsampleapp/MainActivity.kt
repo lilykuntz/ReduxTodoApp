@@ -27,6 +27,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.reduxsampleapp.ui.theme.ReduxSampleAppTheme
+import com.example.remidnerslibrary.tbx_toOneDecimal
+import java.sql.Time
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +50,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TodoList() {
 
+    12.0.tbx_toOneDecimal()
     val todos = remember { mutableStateOf(store.state.todos) }
     val filter = remember { mutableStateOf(store.state.visibilityFilter) }
     store.subscribe {
